@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Employee } from 'src/app/employee-list/employee';
 import { NumberValueAccessor } from '@angular/forms';
-// import { DefaultColorOnEventDirective } from 'src/app/directives/color.directive';
 
 @Component({
   selector: 'app-employee-list',
@@ -26,7 +25,9 @@ employeeList = [
       lastName : 'Singamsetty',
       dept : 'ILP Training',
       city : 'Chicago',
-      email : 'nishanth.singamsetyy@tcs.com'
+      email : 'nishanth.singamsetyy@tcs.com',
+      dob: new Date(1992,6,10),
+      salary: 10000
     },
     {
       employeeid : 2,
@@ -34,7 +35,9 @@ employeeList = [
       lastName : 'Jayaraman',
       dept : 'ILP Training',
       city : 'Chicago',
-      email : 'varsha@tcs.com'
+      email : 'varsha@tcs.com',
+      dob: new Date(1994,8,15),
+      salary: 10000
     },
     {
       employeeid : 3,
@@ -42,7 +45,9 @@ employeeList = [
       lastName : 'Bakshi',
       dept : 'ILP Training',
       city : 'Chicago',
-      email : 'rishab@tcs.com'
+      email : 'rishab@tcs.com',
+      dob: new Date(1995,5,1),
+      salary: 10000
     }
 ]
   ngOnInit(): void {
@@ -61,7 +66,6 @@ employeeList = [
   }
 
   EditEmp(index) {
-    // this.hideInfo=!this.hideInfo;e
     console.log("setting index as ", index)
     this.selectedRow.currentIndex = index;   
   }
@@ -69,7 +73,6 @@ employeeList = [
   UpdateEmp(index) {
     console.log(this.selectedRow.currentIndex,index)
     this.selectedRow.currentIndex = undefined
-    // this.hideInfo=!this.hideInfo;
   }
 
 }

@@ -7,7 +7,7 @@ export class DefaultColorOnEventDirective {
    constructor(private elRef: ElementRef) { 
    }
    @HostListener('mouseover') onMouseOver() {
-     this.changeColor('#ff0000');
+     this.changeColor('#ddd');
    }
    @HostListener('mouseleave') onMouseLeave() {
      this.changeColor('');
