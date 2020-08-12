@@ -1,0 +1,38 @@
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+
+          <th scope="col">Employee ID</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Dept</th>
+          <th scope="col">City</th>
+          <th scope="col">Email</th>
+          <th scope="col"></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr defColOnEvent *ngFor="let employee of employeeList; let i=index;">
+          <td>{{employee.employeeid}}</td>
+          <td><p *ngIf="!editRow(i)">{{employee.firstName}}</p><input class="form-input"  type="text" [value]="employee.firstName" *ngIf="editRow(i)" [(ngModel)]="employee.firstName" #fNameId (input)="getInfo(fNameId,i,'firstName')"></td>
+          <td><p *ngIf="!editRow(i)">{{employee.lastName}}</p><input class="form-input" type="text" [value]="employee.lastName" *ngIf="editRow(i)" [(ngModel)]="employee.lastName"  #lNameId (input)="getInfo(lNameId,i, 'lastName')"></td>
+          <td><p *ngIf="!editRow(i)">{{employee.dept}}</p><input class="form-input" type="text" [value]="employee.dept" *ngIf="editRow(i)" [(ngModel)]="employee.dept"  #deptId (input)="getInfo(deptId, i, 'dept')"></td>
+          <td><p *ngIf="!editRow(i)">{{employee.city}}</p><input class="form-input" type="text" [value]="employee.city" *ngIf="editRow(i)"  [(ngModel)]="employee.city" #cityId (input)="getInfo(cityId, i, 'city')"></td>
+          <td><p *ngIf="!editRow(i)">{{employee.email}}</p><input class="form-input" type="text" [value]="employee.email" *ngIf="editRow(i)" [(ngModel)]="employee.email"  #emailId (input)="getInfo(emailId, i, 'email')"></td>
+          
+          <td>
+            <button *ngIf="!editRow(i)" (click)="EditEmp(i)">
+              <span>Edit</span>
+            </button>
+            <button *ngIf="editRow(i)" (click)="UpdateEmp(i)">
+              <span>Update</span>
+            </button>
+          </td>
+        </tr>
+
+        
+      </tbody>
+    </table>
+  </div>
