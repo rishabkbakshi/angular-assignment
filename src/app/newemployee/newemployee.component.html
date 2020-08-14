@@ -10,8 +10,12 @@
       </thead>
 
       <tbody>
-          <tr >
-              <td></td>
+          <tr *ngFor="let employee of emp2Data; let i=index;">
+              <td><p> {{employee.id}}</p></td>
+              <td><p> {{employee.employee_name}}</p></td>
+              <td><p> {{employee.employee_salary}}</p></td>
+              <td><p> {{employee.employee_age}}</p></td>
+              <td><p> {{employee.profile_image}}</p></td>
           </tr>
       </tbody>
     </table>
