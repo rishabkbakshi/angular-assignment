@@ -1,1 +1,24 @@
-<p>product works!</p>
+<div class="p-4">
+<table class="table products-table">
+    <thead>
+      <tr>
+        <th class="products-table-row" scope="col">Name</th>
+        <th class="products-table-row" scope="col">Price</th>
+        <th class="products-table-row" scope="col"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let product of productList; let i=index;">
+            <td class="products-table-row"><p> {{product.productName}}</p></td>
+            <td class="products-table-row"><p> {{product.price}}</p></td>
+            <td class="products-table-row">
+                <button class="btn btn-primary" (click)= "viewDetail(product)">
+                    <span>View Detail</span>
+                </button>
+            </td>
+            
+        </tr>
+    </tbody>
+  </table>
+</div>

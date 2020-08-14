@@ -14,11 +14,15 @@ import { ApiService } from './services/api.service';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ErrorComponent } from './error/error.component';
 
 const ROUTES: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'product', component: ProductComponent},
-  {path: 'contact', component: ContactComponent}
+  {path: 'products', component: ProductComponent},
+  {path: 'products/:id', component: ProductDetailsComponent},
+  {path: 'contact', component: ContactComponent},
+  {path: '**', component: ErrorComponent}
 ]
 
 @NgModule({
@@ -29,7 +33,9 @@ const ROUTES: Routes = [
     // NewemployeeComponent,
     HomeComponent,
     ProductComponent,
-    ContactComponent
+    ContactComponent,
+    ProductDetailsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
