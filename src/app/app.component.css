@@ -6,3 +6,7 @@ body{
 .core-class{
     padding: 15px;
 }
+
+#NewEmployeeTable{
+    margin-top: 20px;
+}

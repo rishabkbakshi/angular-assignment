@@ -26,7 +26,7 @@ employeeList = [
       dept : 'ILP Training',
       city : 'Chicago',
       email : 'nishanth.singamsetyy@tcs.com',
-      dob: new Date(1992,6,10),
+      dob: new Date(1993,6,10),
       salary: 10000
     },
     {
