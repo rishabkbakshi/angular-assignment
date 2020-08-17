@@ -18,7 +18,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ErrorComponent } from './error/error.component';
 
 const ROUTES: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', redirectTo: '/home', pathMatch:'full'},
+  {path: 'home', component: HomeComponent},
   {path: 'products', component: ProductComponent},
   {path: 'products/:id', component: ProductDetailsComponent},
   {path: 'contact', component: ContactComponent},

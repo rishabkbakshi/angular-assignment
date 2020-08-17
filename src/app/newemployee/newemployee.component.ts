@@ -21,8 +21,4 @@ export class NewemployeeComponent implements OnInit {
     })
   }
 
-
-
-
-
 }
