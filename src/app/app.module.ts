@@ -16,6 +16,7 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ErrorComponent } from './error/error.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 const ROUTES: Routes = [
   {path: '', redirectTo: '/home', pathMatch:'full'},
@@ -36,13 +37,15 @@ const ROUTES: Routes = [
     ProductComponent,
     ContactComponent,
     ProductDetailsComponent,
-    ErrorComponent
+    ErrorComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    FormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

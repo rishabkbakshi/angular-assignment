@@ -1,0 +1,5 @@
+Important Commands:
+===================
+npx ng g c <component_name>
+npx ng g d <directive_name>
+npx ng g s <service_name>
