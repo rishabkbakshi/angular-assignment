@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-template-form',
@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 export class TemplateFormComponent implements OnInit {
 
   public formSubmitted: boolean = false;
+  public model:any = {};
 
-  submitForm(){
+  onSubmit(){
     this.formSubmitted = true
     console.log(this.formSubmitted)
   }
 
   ngOnInit(): void {
+
   }
 
 }

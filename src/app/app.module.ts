@@ -18,6 +18,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ErrorComponent } from './error/error.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ConfirmEqualValidatorDirective } from './directives/confirm-equal-validator.directive';
 
 const ROUTES: Routes = [
   {path: '', redirectTo: '/home', pathMatch:'full'},
@@ -40,7 +41,8 @@ const ROUTES: Routes = [
     ProductDetailsComponent,
     ErrorComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ConfirmEqualValidatorDirective
   ],
   imports: [
     BrowserModule,
