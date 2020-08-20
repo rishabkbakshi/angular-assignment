@@ -1,7 +1,7 @@
 import { Directive, Input } from '@angular/core';
 import { NG_VALIDATORS, Validator, ValidationErrors, FormGroup } from '@angular/forms';
 
-import { ConfirmEqual } from './confirm-equal.validator';
+import { ConfirmEqual } from '../validators/confirm-equal.validator';
 
 @Directive({
   selector: '[confirmEqual]',
