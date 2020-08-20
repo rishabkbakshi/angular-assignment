@@ -8,12 +8,18 @@ import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 })
 export class TemplateFormComponent implements OnInit {
 
+  public showDetails: boolean = false;
   public formSubmitted: boolean = false;
   public model:any = {};
 
-  onSubmit(){
+  onSubmit(form){
     this.formSubmitted = true
-    console.log(this.formSubmitted)
+
+    if(form.form.status !== "VALID"){
+      return;
+    }
+    
+    this.showDetails = true
   }
 
   ngOnInit(): void {

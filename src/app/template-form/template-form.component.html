@@ -5,7 +5,7 @@
 </div>
 <div class="row">
     <div class="col center">
-        <form name="templateForm" #templateForm="ngForm" (ngSubmit)="onSubmit()"  [confirmEqual]="['password', 'confirmPassword']" novalidate>
+        <form name="templateForm" #templateForm="ngForm" (ngSubmit)="onSubmit(templateForm)"  [confirmEqual]="['password', 'confirmPassword']" novalidate>
             <div class="form-group">
                 <label for="templateFullName">Full Name</label>
                 <input type="text" name="fullName" class="form-control" [ngClass]="{ 'is-invalid' : formSubmitted && (fullName.errors && fullName.errors.required) }" id="templateFullName" aria-describedby="fullNameHelp" placeholder="Enter Full Name" [(ngModel)]="model.fullName" #fullName="ngModel" required>
@@ -40,17 +40,17 @@
                 <!-- <small>{{ (templateForm.value.passwords && templateForm.value.passwords.password) ? ( (templateForm.value.passwords.password === templateForm.value.passwords.confirmPassword) ? "The passwords match" : "The passwords do not match" ) :  "Please enter passwords in the fields" }}</small> -->
 
               </div>           
-            <button type="submit" class="mt-3 btn btn-primary" (click)="onSubmit()">Submit</button>
+            <button type="submit" class="mt-3 btn btn-primary">Submit</button>
           </form>
     </div>
 </div>
-<!-- 
-<div *ngIf="formSubmitted" class="row mt-4">
+
+<div *ngIf="showDetails" class="row mt-4">
     <div class="col">
         <h3 class="mb-4"> The details you have entered are: </h3>
         <p> <strong>Full Name:</strong> {{templateForm.value.fullName}}</p>        
         <p> <strong>Email:</strong> {{templateForm.value.email}}</p>       
         <p> <strong>Phone No:</strong> {{templateForm.value.phone}}</p>        
-        <p> <strong>Password:</strong> {{templateForm.value.passwords.password}}</p> 
+        <p> <strong>Password:</strong> {{templateForm.value.password}}</p> 
     </div>
-</div> -->
+</div>
